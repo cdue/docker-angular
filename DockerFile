@@ -1,0 +1,16 @@
+FROM alpine
+MAINTAINER Cédric Dué "cedric.due@gmail.com"
+
+#
+# install Node & Git
+#
+RUN apk add --update --no-cache bash git nodejs
+
+WORKDIR /app
+
+EXPOSE 8000
+
+#
+# start a bash terminal
+#
+ENTRYPOINT ["/bin/bash"]
